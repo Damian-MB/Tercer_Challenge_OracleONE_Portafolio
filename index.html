@@ -20,9 +20,9 @@
                     <li class="item-menu"><a href="#formacion">FORMACION</a></li>
                     <li class="item-menu"><a href="#proyectos">PROYECTOS</a></li>
                     <li class="item-menu"><a href="#contacto">CONTACTO</a></li>
-                    <li class="item-menu icono"><i class="fa-solid fa-bars"></i></i></li>
                 </ul>
             </nav>
+            <i class="fa-solid fa-bars" id="icono-menu"></i>
         </header>
 
         <section class="banner">
@@ -33,13 +33,13 @@
             <section class="principal">
                 <div id="texto">
                     <ul>
-                        <li><p id="presentacion" >¡Hola a todos! Me llamo <span id="damian">Damián</span> y estoy felizmente descubriendo el mundo Front-end.</p></li>
+                        <li><p id="presentacion" >¡Hola a todos! Mi nombre es <span id="damian">Damián</span> y estoy felizmente descubriendo el mundo Front-end.</p></li>
                         <li><p id="sugerencia">Conoce mis proyectos y sé el próximo en solicitar la creación de una página web.</p></li>
                         <ul id="redes">
                             <li><a href="https://github.com/Damian-MB"><img src="imagenes/gitHub-img.png" alt="logo Github"></a></li>
                             <li><a href="https://www.linkedin.com/in/damián-matías-bandeo-823350187"><img src="imagenes/111.png" alt="logo LinkedIn"></a></li>
                             <li><a href="https://www.instagram.com/damianmbandeo/"><img src="imagenes/Rectangle 1.png" alt="logo Instagram"></a></li>
-                            <li><a href=""><img src="imagenes/Gmail_logo 1.png" id="gmail-img" alt="icono de Gmail"></a></li>
+                            <li><a href="https://drive.google.com/file/d/1Li8JqJ7Hes3JU9SDZrHkAi4xuARXSHKV/view?usp=sharing"><img src="imagenes/CV-icon.png" id="gmail-img" alt="icono de Gmail"></a></li>
                         </ul>
                     </ul>
                 </div>
@@ -50,11 +50,11 @@
             </section>
 
             <section class="sobre-mi" id="sobre-mi">
-                <h3 class="subtitulo">Sobre mí</h3>
+                <h3 class="subtitulo-izq">Sobre mí</h3>
                 <span class="texto-sobre-mi">
-                    Soy una persona con voluntad y muy buena predisposición al aprendizaje continuo, persiguiendo siempre el crecimiento personal tanto en el ámbito laboral como en la parte humana.<br>
-                    Formado como Técnico Electromecánico en una escuela secundaria y con la mitad de la carrera Ingeniería Electromecánica realizada en la Facultad Regional Reconquista, ingresé al mercado laboral en <a href="https://www.electroluz.com.ar/">Proyección Electroluz</a> a mediados del 2015.<br>
-                    En la actualidad, desempeñando tareas de mantenimiento eléctrico en una Central de Generación de Energía Eléctrica en <a href="https://www.secco.com.ar/#!/">SECCO</a>.<br> Las ganas de aprender constantemente cosas nuevas y el interés especial por el mundo de la programación, hicieron que hoy sea partícipe del proyecto Oracle ONE en Alura Latam, dando inicio a un nuevo camino lleno de aprendizaje.
+                    Con muy buena predisposición al aprendizaje y adaptabilidad al cambio, persigo siempre el desarrollo personal tanto en el ámbito laboral como en la parte humana.<br>
+                    Formado como Técnico Electromecánico en una escuela secundaria y habiendo cursado gran parte de la carrera Ingeniería Electromecánica en la Facultad Regional Reconquista, ingresé al mercado laboral formando parte de <a href="https://www.electroluz.com.ar/">Proyección Electroluz</a> a mediados del 2015.<br>
+                    Actualmente, desempeño tareas de mantenimiento en una Central de Generación de Energía Eléctrica en <a href="https://www.secco.com.ar/#!/">SECCO</a>, localizada en la ciudad de Villa Ocampo.<br> Las ganas de aprender constantemente cosas nuevas y el interés especial por el mundo de la programación, hicieron que hoy sea partícipe del proyecto <a href="https://www.oracle.com/ar/education/oracle-next-education/">Oracle ONE en Alura Latam</a>, dando inicio a un nuevo camino lleno de aprendizaje y oportunidades de crecimiento.
                 </span> 
             </section>
 
@@ -106,36 +106,38 @@
                         <img src="imagenes/udemy_icon.png" alt="logo de Udemy">
                         <p>"De cero a experto JavaScript"</p>
                         <p>Estado: en curso</p>
-                        <p>Udemy</p>
+                        <p class="marco-pie"><strong>Udemy</strong></p>
                     </li>
                     <li class="marco">
                         <img src="imagenes/henry_icon.png" alt="logo de Soy Henry">
                         <p>"Curso preparatorio Academia Henry"</p> 
                         <p>Estado: finalizado</p>
-                        <p>Henry</p> 
+                        <p class="marco-pie"><strong>Henry</strong></p> 
                     </li>
                     <li class="marco">
                         <img src="imagenes/Alura_icon.png" id="logoAlura" alt="logo Alura Latam">
                         <p>Desarrollo Web - Proyeto Oracle ONE</p>
                         <p>Estado: en curso</p>
-                        <p>Alura Latam </p>
+                        <p class="marco-pie"><strong>Alura Latam</strong></p>
                     </li>
                 </ul>
             </section>
 
             <section class="proyectos" id="proyectos">
-                <h3 class="subtitulo">Proyectos</h3>
+                <h3 class="subtitulo-izq">Proyectos</h3>
                 <div class="div-proyectos ahorcado">
                     <p class="titulo-proyecto">JUEGO DEL AHORCADO</p>
                     <div class="proyecto-descripcion">
                         <p>
                             Segundo challenge de Alura correspondiente al programa Oracle Next Education. El desafío fue crear una aplicación que permita jugar al ahorcado y cumpla los siguientes requisitos:</p>
                         <ul>
-                            <li>Sólo letras mayúsculas, sin caracteres especiales</li>
-                            <li>Tener una función agregar palabra</li>
-                            <li>Tener opción de abandonar juego</li>
+                            <li>Admita sólo letras mayúsculas, sin caracteres especiales</li>
+                            <li>Tener una función "agregar palabra"</li>
+                            <li>Tener opción de abandonar juego o "desistir"</li>
+                            <li>Posibilidad de ver las letras elegidas en pantalla, las cuales no podían repetirse</li>
+                            <li>Mostrar resultado del juego una vez finalizado</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque beatae voluptas labore nisi veniam dolores repellat aliquam quia nobis ex? Recusandae iure animi obcaecati similique iusto sequi veritatis unde voluptate.</p>
+                        <p>El proyecto fue desarrollado a partir de los conocimientos adquiridos en la formación <strong>Principiante en Programación</strong> y se llevó a cabo mediante la utilización de la aplicación "Trello".</p>
                     </div>
                     <div class="proyecto-capturas">
                         <img src="imagenes/pantalla_principal_juego_ahorcado.jpg" alt="pantalla principal de la aplicacion juego del ahorcado">
@@ -154,11 +156,12 @@
                     <div class="proyecto-descripcion">
                         <p>Primer challenge de Alura correspondiente al programa Oracle Next Education. El desafío fue crear una aplicación que permita encriptar y desencriptar un mensaje de texto, además de cumplir los siguientes requisitos:</p>
                         <ul>
-                            <li>Sólo letras minúsculas, sin caracteres especiales</li>
+                            <li>Admitir sólo letras minúsculas, sin caracteres especiales</li>
                             <li>Tener una función borrar entrada y salida</li>
                             <li>Tener función de desencriptar</li>
+                            <li>Tener un botón para copiar salida de mensaje</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque beatae voluptas labore nisi veniam dolores repellat aliquam quia nobis ex? Recusandae iure animi obcaecati similique iusto sequi veritatis unde voluptate.</p>
+                        <p>El proyecto fue realizado luego de la formación en <strong>Lógica de Programación</strong> realizada en la plataforma de Alura Latam.</p>
                     </div>
                 </div>
             </section>
@@ -194,6 +197,6 @@
         <footer class="pie-de-pagina">
             <span>Copyright 2022 &copy DMB / <a href="https://www.oracle.com/ar/education/oracle-next-education/">Oracle Next Education - Alura Latam</a></span>
         </footer>
+        <script src="main.js"></script>
     </body>
-
 </html>

@@ -21,7 +21,6 @@ html {
     font-weight: bold;
     color: rgb(6, 6, 126);
     text-transform: uppercase;
-    transition: 1000ms;
 }
 #nombre:before {
     content: "\2727";
@@ -38,7 +37,7 @@ html {
     font-size: 15px;
     cursor: pointer; 
 }
-.item-menu.icono {
+#icono-menu {
     display: none;
 }
 .item-menu a {
@@ -105,14 +104,6 @@ html {
    transition: 500ms;
    background: none;
 }
-#cv {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    padding-right: 30px;
-    transition: 500ms;
-    border: 2px solid #FFFFFF;
-}
 #redes img:hover {
     transform: scale(1.3);
 }
@@ -132,6 +123,12 @@ html {
 }
 
 .subtitulo {
+    font-size: 25px;
+    color: #464646;
+    text-transform: uppercase;
+    text-align: center;
+}
+.subtitulo-izq {
     font-size: 25px;
     color: #464646;
     text-transform: uppercase;
@@ -156,12 +153,20 @@ html {
     line-height: 1.5em;
 }
 .texto-sobre-mi a {
-    color: #070B4F;
-    font-style: italic;
+    color: #272727;
     text-decoration: none;
+    border-bottom: 0.5px solid #272727;
 }
 
-.skills-hobbies, .formacion, .proyectos {
+.skills-hobbies, .formacion {
+    margin: 140px auto;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #F5F5F5;
+    border-style: ridge;
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%239C92AC' fill-opacity='0.10' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+.proyectos {
     margin: 140px auto;
     padding-top: 20px;
     text-align: center;
@@ -186,15 +191,16 @@ html {
     width: 120px;
     height: 120px;
     padding: 10px;
-    margin-right: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
     margin-bottom: 50px;
     border: 1px solid #464646;
     background-color: white;
     border-radius: 10px 10px 20px 20px;
     border: 3px solid #464646;
 }
-.cuadro p {
-    margin: 7px 0 0 0;
+.cuadro p, .marco p {
+    margin: 8px 0 0 0;
     font-weight: 500;
     font-size: 20px;
 }
@@ -203,13 +209,18 @@ html {
     width: 250px;
     height: 250px;
     padding: 10px;
-    margin-right: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
     margin-bottom: 50px;
     border: 1px solid #464646;
     background-color: white;
     border-radius: 10px 10px 20px 20px;
     border: 3px solid #464646;
     vertical-align: top;
+}
+.marco-pie {
+    position: relative;
+    bottom: -15px;
 }
 .marco img {
     width: 40%;
@@ -387,9 +398,209 @@ fieldset {
     color: #646464;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
     .encabezado {
-        background-color: #fcc155;
+        padding: 5px 8px;
+    }
+    #nombre {
+        font-size: 18px;
+    }
+    #nombre:before {
+        padding-right: 6px;
+    }
+    .menu {
+        display: none;
+        z-index: 1;
+        right: 0px;
+        top: 7px;
+        padding-top: 10px;
+    }
+    .menuTrasladado {
+        display: block;
+    }
+    #icono-menu {
+        display: inline-block;
+        position: absolute;
+        right: 8px;
+        top: 10px;
+        font-size: 0.95em;
+        z-index: 2;
+    }
+    .item-menu {
+        display: block;
+        background-color: #FFFFFF;
+        opacity: 0.8;
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 1.8em;
+        padding-top: 7px;
+    }
+    .banner {
+        background: url(imagenes/banner.jpg) no-repeat top / cover;
+        height: 130px;
+    }
+    .contenedor {
+        padding: 15px 7% 0px 7%;
+    }
+    .principal div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .principal #texto {
+        width: 100%;
+        margin: 0;
+    }
+    .principal #foto {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 35px;
+        margin-top: 45px;
+    }
+    .principal ul {
+        padding: 0;
+    }
+    #presentacion {
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 1.2em;
+    }
+    #sugerencia {
+        font-size: 16px;
+        line-height: 1.2em;
+    }
+    #redes {
+        text-align: center;
+    }
+    #redes img {
+       width: 30px;
+       padding-right: 30px;
+    }
+    #foto-perfil {
+        width: 80%;
+        max-width: 200px;
+        margin-left: 0px;
+        margin-top: 0;
+    }
+    .subtitulo, .subtitulo-izq {
+        font-size: 18px;
+        margin: 20px auto;
+    }
+    .sobre-mi {
+        margin: 50px auto;
+        padding: 10px 12px 10px 12px;
+    }
+    .sobre-mi h3 {
+        margin: 10px auto;
+    }
+    .texto-sobre-mi {
+        font-size: 14px;
+    }
+    .skills-hobbies, .formacion {
+        margin: 20px 30px;
+        padding-top: 10px;
+    }
+    .proyectos {
+        margin: 20px auto;
+        padding-top: 10px;
+    }
+    .skills-hobbies > ul, .sobre-mi > ul {
+        padding: 20px 0px 20px 0px;
+    }
+    .skills-hobbies p, .sobre-mi p {
+        font-size: 14px;
+    }
+    .cuadro {
+        width: 80px;
+        height: 80px;
+    }
+    .formacion > ul {
+        margin: 0;
+        padding: 20px 0px 20px 0px;
+    }
+    .marco {
+        width: 150px;
+        height: 200px;
+        padding: 5px;
+    }
+    .cuadro p, .marco p {
+        font-size: 14px;
+    }
+    .marco img {
+        width: 40%;
+        height: 30%;
+    }
+    .div-proyectos {
+        margin: 40px auto;
+    }
+    .proyecto-descripcion, .proyecto-capturas {
+        display: block;
+        width: 100%;
+    }
+    .titulo-proyecto {
+        margin-bottom: 1em;
+        font-size: 1.25em;
+    }
+    .proyecto-descripcion {
+        text-align: justify;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .proyecto-descripcion p {
+        padding: 0 5%;
+    }
+    .proyecto-descripcion ul {
+        padding: 0 10%;
+    }
+    .proyecto-capturas img {
+        width: 95%;
+        margin: 0 0 20px 0;
+    }
+    .proyecto-capturas img:hover {
+        transform: scale(1.15);
+    }
+    .btn a {
+        font-size: 11px;
+    }
+    .btn {
+        margin: 5px 10px 25px 10px;
+        padding: 4px 5px;
+    }
+    .btn:hover {
+        transform: scale(1.07);
+    }
+    .contacto div {
+        display: block;
+        width: 100%;
+    }
+    .subtitulo-contacto {
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+    .formulario {
+        border: 1px dotted #FFFFFF;
+    }
+    .submit {
+        width: 145px;
+        font-size: 13px;
+    }
+    .pie-de-pagina span {
+        margin: 0;
+        font-size: 11px;
     }
 }
 
+@media (min-width: 700px) and (max-width: 1100px) {
+    .encabezado {
+        padding-bottom: 25px;
+    }
+    .menu {
+        right: 10%;
+        top: 35px;
+    }
+    .submit {
+        width: 145px;
+        font-size: 13px;
+    }
+}
